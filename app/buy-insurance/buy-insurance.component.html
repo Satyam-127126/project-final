@@ -1,0 +1,35 @@
+<h2>Buy Insurance</h2>
+<form (ngSubmit)="onSubmit()" class="insurance-form">
+  <div class="form-group">
+    <label for="type">Type:</label>
+    <select id="type" [(ngModel)]="policy.type" name="type" required>
+      <option value="" disabled selected>Select type</option>
+      <option value="Car">Car</option>
+      <option value="Bike">Bike</option>
+      <option value="Truck">Truck</option>
+      <option value="E-Rickshaw">E-Rickshaw</option>
+      <option value="Travel">Travel</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label for="vehicleModel">Vehicle Model:</label>
+    <input type="text" id="vehicleModel" [(ngModel)]="policy.vehicleModel" name="vehicleModel" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="registrationNumber">Registration Number:</label>
+    <input type="text" id="registrationNumber" [(ngModel)]="policy.registrationNumber" name="registrationNumber" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="premiumAmount">Premium Amount:</label>
+    <input type="number" id="premiumAmount" [(ngModel)]="policy.premiumAmount" name="premiumAmount" required>
+  </div>
+  
+  <button type="submit">Buy Insurance</button>
+</form>
+
+<div *ngIf="policyNumber" class="policy-number">
+  <p>Your policy number is: {{ policyNumber }}</p>
+</div>

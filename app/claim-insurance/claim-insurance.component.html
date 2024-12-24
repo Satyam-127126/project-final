@@ -1,0 +1,17 @@
+<h2>Claim Insurance</h2>
+<form (ngSubmit)="onSubmit()">
+  <label for="policyNumber">Policy Number:</label>
+  <input type="text" id="policyNumber" [(ngModel)]="claim.policyNumber" name="policyNumber" required>
+  
+  <label for="reason">Reason:</label>
+  <input type="text" id="reason" [(ngModel)]="claim.reason" name="reason" required>
+  
+  <label for="claimAmount">Claim Amount:</label>
+  <input type="number" id="claimAmount" [(ngModel)]="claim.claimAmount" name="claimAmount" required>
+  
+  <button type="submit">Claim Insurance</button>
+</form>
+
+<div *ngIf="approvalStatus">
+  <h3>{{ approvalStatus }}</h3>
+</div>

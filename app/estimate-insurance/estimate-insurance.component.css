@@ -1,0 +1,9 @@
+form label, form select, form input {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  form select, form input {
+    padding: 8px;
+    box-sizing: border-box;
+  }

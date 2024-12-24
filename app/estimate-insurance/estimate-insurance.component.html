@@ -1,0 +1,20 @@
+<h2>Estimate Insurance</h2>
+<form (ngSubmit)="onSubmit()" style="display: flex; flex-direction: column; max-width: 300px;">
+  <label for="type">Type:</label>
+  <select id="type" [(ngModel)]="type" name="type" required>
+    <option value="Car">Car</option>
+    <option value="Truck">Truck</option>
+    <option value="Travel">Travel</option>
+    <option value="E-Rickshaw">E-Rickshaw</option>
+    <option value="Bike">Bike</option>
+  </select>
+  
+  <label for="vehicleModel">Vehicle Model:</label>
+  <input type="text" id="vehicleModel" [(ngModel)]="vehicleModel" name="vehicleModel" required>
+  
+  <button type="submit">Estimate Insurance</button>
+</form>
+
+<div *ngIf="estimate !== null">
+  <h3>Estimated Premium: {{ estimate }}</h3>
+</div>
